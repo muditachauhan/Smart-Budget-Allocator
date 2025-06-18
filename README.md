@@ -4,7 +4,7 @@ A smart and interactive web tool that helps users *allocate their budget optimal
 
 ---
 
-## 🚀 Features
+## Features
 
    *Subset Sum Algorithm* for smart budget allocation
    *Interactive Charts* to visualize spending
@@ -15,7 +15,7 @@ A smart and interactive web tool that helps users *allocate their budget optimal
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - *Frontend*: HTML, CSS, JavaScript
 - *Backend*: Python (Flask)
