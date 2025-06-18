@@ -1,0 +1,118 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f7f7f7;
+  color: #333;
+  margin: 0;
+  transition: background 0.3s, color 0.3s;
+}
+
+.container {
+  max-width: 600px;
+  margin: 2rem auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+form input {
+  width: 48%;
+  padding: 0.6rem;
+  margin: 0.5rem 1% 1rem 1%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+button {
+  flex: 1;
+  padding: 0.6rem;
+  margin: 0.5rem 0;
+  border: none;
+  border-radius: 5px;
+  background: #4F46E5;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background: #4338CA;
+  transform: scale(1.03);
+}
+
+#resultList {
+  list-style: none;
+  padding-left: 0;
+}
+
+#resultList li {
+  padding: 0.5rem;
+  border-bottom: 1px solid #ddd;
+}
+
+canvas {
+  margin-top: 20px;
+  max-width: 100%;
+}
+
+.toast {
+  visibility: hidden;
+  min-width: 250px;
+  background: #4caf50;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  padding: 10px;
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.toast.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.dark {
+  background: #121212;
+  color: #f2f2f2;
+}
+
+.dark .container {
+  background: #1f1f1f;
+}
+
+.dark input,
+.dark button {
+  background: #2a2a2a;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+.dark button:hover {
+  background: #3730a3;
+}
+
+.dark .toast {
+  background: #22c55e;
+}
+
+.dark-toggle {
+  text-align: center;
+  margin-bottom: 1rem;
+}

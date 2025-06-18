@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Budget Allocator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h1>Smart Budget Allocator</h1>
+
+  <div class="dark-toggle">
+    <label><input type="checkbox" id="darkModeToggle"/> 🌗 Dark Mode</label>
+  </div>
+
+  <form id="budgetForm">
+    <input type="number" id="budget" placeholder="Total Budget" required />
+    <div id="expensesList">
+      <div class="expense">
+        <input type="text" class="name" placeholder="Expense Name" required />
+        <input type="number" class="cost" placeholder="Cost" required />
+      </div>
+    </div>
+    <div class="buttons">
+      <button type="button" onclick="addExpense()">+ Add Expense</button>
+      <button type="submit">Allocate Budget</button>
+      <button type="button" onclick="downloadPDF()">Export PDF</button>
+    </div>
+  </form>
+
+  <h2>Allocated Expenses</h2>
+  <ul id="resultList"></ul>
+  <canvas id="budgetChart"></canvas>
+</div>
+
+<div id="toast" class="toast">Saved!</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
